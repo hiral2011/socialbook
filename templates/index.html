@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="favicon.png" rel="icon" type="image/png">
+    <link href="{% static 'favicon.png' %}" rel="icon" type="image/png">
     <title>Home</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -50,17 +50,18 @@
                         <a href="#"
                             class="bg-pink-500 flex font-bold hidden hover:bg-pink-600 hover:text-white inline-block items-center lg:block max-h-10 mr-4 px-4 py-2 rounded shado text-white">
                             <ion-icon name="add-circle" class="-mb-1
-                             mr-1 opacity-90 text-xl uilus-circle"></ion-icon> Upload Pics / Videos
+                             mr-1 opacity-90 text-xl uilus-circle"></ion-icon> Upload Pics
                         </a>
                          <!-- upload dropdown box -->
                         <div uk-dropdown="pos: top-right;mode:click ; animation: uk-animation-slide-bottom-small" class="header_dropdown">
     
                             <!-- notivication header -->
                             <div class="px-4 py-3 -mx-5 -mt-4 mb-5 border-b">
-                                <h4>Upload Pics or Videos</h4>
+                                <h4>Upload Pics</h4>
                             </div>
     
                             <!-- notification contents -->
+                            
                             <div class="flex justify-center flex-center text-center">
     
                                 <div class="flex flex-col choose-upload text-center">
@@ -72,7 +73,7 @@
                                         </svg>
                                     </div>
 
-                                    <p class="my-3 leading-6"> Upload pics or videos <br> please upload her ..
+                                    <p class="my-3 leading-6"> Upload pics or videos <br> please upload here...
                                     </p>
                                     <div uk-form-custom>
                                         <input type="file">
@@ -104,6 +105,7 @@
                                 </div>
     
                             </div>
+                            
                             <div class="px-4 py-3 -mx-5 -mb-4 mt-5 border-t text-sm">
                                 Your Video size Must be Maxmium 999MB
                             </div>
@@ -121,7 +123,7 @@
                             <ul class="dropdown_scrollbar" data-simplebar>
                                 <li>
                                     <a href="#">
-                                        <div class="drop_avatar"> <img src="{% static 'assets/images/avatars/avatar-1.jpg' %}" alt="">
+                                        <div class="drop_avatar"> <img src="{% static 'assets/images/avatars/11.jpg' %}" alt="">
                                         </div>
                                         <div class="drop_content">
                                             <p> <strong class="text-link" >Taiye</strong>  
@@ -149,7 +151,7 @@
                             <ul class="dropdown_scrollbar" data-simplebar>
                                 <li>
                                     <a href="#">
-                                        <div class="drop_avatar"> <img src="{% static 'assets/images/avatars/avatar-1.jpg' %}" alt="">
+                                        <div class="drop_avatar"> <img src="{% static 'assets/images/avatars/11.jpg' %}" alt="">
                                         </div>
                                         <div class="drop_content">
                                             <strong> Taiye </strong> <time> 6:43 PM</time>
@@ -167,14 +169,12 @@
                         <!-- profile -->
 
                         <a href="#">
-                            <img src="{% static 'assets/images/avatars/avatar-2.jpg' %}" class="header-avatar" alt="">
+                            <img src="{{user_profile.profileimg.url}}" class="header-avatar" alt="">
                         </a>
                         <div uk-drop="mode: click;offset:9" class="header_dropdown profile_dropdown border-t">
                             <ul>
-                                <li><a href="setting.html"> Account setting </a> </li>
-                                <li><a href="explore.html">explore </a> </li>
-                                <li><a href="#"> Help </a> </li>
-                                <li><a href="signin.html"> Log Out</a></li>
+                                <li><a href="/settings"> Account setting </a> </li>
+                                <li><a href="logout"> Log Out</a></li>
                             </ul>
                         </div>
 
@@ -199,7 +199,7 @@
                                 <div class="flex flex-1 items-center space-x-4">
                                     <a href="#">
                                         <div class="bg-gradient-to-tr from-yellow-600 to-pink-600 p-0.5 rounded-full">  
-                                            <img src="{% static 'assets/images/avatars/avatar-2.jpg' %}" class="bg-gray-200 border border-white rounded-full w-8 h-8">
+                                            <img src="{% static 'assets/images/avatars/12.jpg' %}" class="bg-gray-200 border border-white rounded-full w-8 h-8">
                                         </div>
                                     </a>
                                     <span class="block capitalize font-semibold "> tomi_ml </span>
@@ -244,8 +244,8 @@
                             </div>
     
                             <div uk-lightbox>
-                                <a href="{% static 'assets/images/post/img4.jpg' %}">  
-                                    <img src="{% static 'assets/images/post/img4.jpg' %}" alt="">
+                                <a href="{% static 'assets/images/post/14.jpg' %}">  
+                                    <img src="{% static 'assets/images/post/14.jpg' %}" alt="">
                                 </a>
                             </div>
                             
@@ -276,9 +276,9 @@
                                 </div>
                                 <div class="flex items-center space-x-3"> 
                                     <div class="flex items-center">
-                                        <img src="{% static 'assets/images/avatars/avatar-1.jpg' %}" alt="" class="w-6 h-6 rounded-full border-2 border-white ">
-                                        <img src="{% static 'assets/images/avatars/avatar-4.jpg' %}" alt="" class="w-6 h-6 rounded-full border-2 border-white  -ml-2">
-                                        <img src="{% static 'assets/images/avatars/avatar-2.jpg' %}" alt="" class="w-6 h-6 rounded-full border-2 border-white  -ml-2">
+                                        <img src="{% static 'assets/images/avatars/11.jpg' %}" alt="" class="w-6 h-6 rounded-full border-2 border-white ">
+                                        <img src="{% static 'assets/images/avatars/14.jpg' %}" alt="" class="w-6 h-6 rounded-full border-2 border-white  -ml-2">
+                                        <img src="{% static 'assets/images/avatars/12.jpg' %}" alt="" class="w-6 h-6 rounded-full border-2 border-white  -ml-2">
                                     </div>
                                     <div class="">
                                         Liked <strong> taiye</strong> and <strong> 209 Others </strong>
@@ -288,7 +288,7 @@
                                 <div class="border-t pt-4 space-y-4 ">
                                     <div class="flex">
                                         <div class="w-10 h-10 rounded-full relative flex-shrink-0">
-                                            <img src="{% static 'assets/images/avatars/avatar-1.jpg' %}" alt="" class="absolute h-full rounded-full w-full">
+                                            <img src="{% static 'assets/images/avatars/11.jpg' %}" alt="" class="absolute h-full rounded-full w-full">
                                         </div>
                                         <div class="text-gray-700 py-2 px-3 rounded-md bg-gray-100 h-full relative lg:ml-5 ml-2 lg:mr-20   ">
                                             <p class="leading-6">Y'all like billie eillish? <urna class="i uil-heart"></urna> <i
@@ -298,7 +298,7 @@
                                     </div>
                                     <div class="flex">
                                         <div class="w-10 h-10 rounded-full relative flex-shrink-0">
-                                            <img src="{% static 'assets/images/avatars/avatar-1.jpg' %}" alt="" class="absolute h-full rounded-full w-full">
+                                            <img src="{% static 'assets/images/avatars/11.jpg' %}" alt="" class="absolute h-full rounded-full w-full">
                                         </div>
                                         <div class="text-gray-700 py-2 px-3 rounded-md bg-gray-100 h-full relative lg:ml-5 ml-2 lg:mr-20   ">
                                             <p class="leading-6">She's my favourite <i class="uil-grin-tongue-wink-alt"></i>
@@ -329,7 +329,7 @@
                                 <div class="flex flex-1 items-center space-x-4">
                                     <a href="#">
                                         <div class="bg-gradient-to-tr from-yellow-600 to-pink-600 p-0.5 rounded-full">  
-                                            <img src="{% static 'assets/images/avatars/avatar-2.jpg' %}" class="bg-gray-200 border border-white rounded-full w-8 h-8">
+                                            <img src="{% static 'assets/images/avatars/12.jpg' %}" class="bg-gray-200 border border-white rounded-full w-8 h-8">
                                         </div>
                                     </a>
                                     <span class="block capitalize font-semibold "> tomi_ml </span>
@@ -376,16 +376,16 @@
                             <div uk-lightbox>
                                 <div class="grid grid-cols-2 gap-2 p-2">
 
-                                    <a href="{% static 'assets/images/post/img9.jpg' %}" class="col-span-2">  
-                                        <img src="{% static 'assets/images/post/img9.jpg' %}" alt="" class="rounded-md w-full lg:h-76 object-cover">
+                                    <a href="{% static 'assets/images/post/11.jpg' %}" class="col-span-2">  
+                                        <img src="{% static 'assets/images/post/11.jpg' %}" alt="" class="rounded-md w-full lg:h-76 object-cover">
                                     </a>
-                                    <a href="{% static 'assets/images/post/img10.jpg' %}">  
-                                        <img src="{% static 'assets/images/post/img10.jpg' %}" alt="" class="rounded-md w-full h-full">
-                                    </a>
-                                    <a href="{% static 'assets/images/post/img11.jpg' %}" class="relative">  
-                                        <img src="{% static 'assets/images/post/img11.jpg' %}" alt="" class="rounded-md w-full h-full">
+                                    <!-- <a href="{% static 'assets/images/post/12.jpg' %}">  
+                                        <img src="{% static 'assets/images/post/12.jpg' %}" alt="" class="rounded-md w-full h-full">
+                                    </a> -->
+                                    <!-- <a href="{% static 'assets/images/post/13.jpg' %}" class="relative">  
+                                        <img src="{% static 'assets/images/post/13.jpg' %}" alt="" class="rounded-md w-full h-full">
                                         <div class="absolute bg-gray-900 bg-opacity-30 flex justify-center items-center text-white rounded-md inset-0 text-2xl"> + 15 more </div>
-                                    </a>
+                                    </a> -->
 
                                 </div>
                             </div>
@@ -416,9 +416,9 @@
                                 </div>
                                 <div class="flex items-center space-x-3"> 
                                     <div class="flex items-center">
-                                        <img src="{% static 'assets/images/avatars/avatar-1.jpg' %}" alt="" class="w-6 h-6 rounded-full border-2 border-white ">
-                                        <img src="{% static 'assets/images/avatars/avatar-4.jpg' %}" alt="" class="w-6 h-6 rounded-full border-2 border-white  -ml-2">
-                                        <img src="{% static 'assets/images/avatars/avatar-2.jpg' %}" alt="" class="w-6 h-6 rounded-full border-2 border-white  -ml-2">
+                                        <img src="{% static 'assets/images/avatars/11.jpg' %}" alt="" class="w-6 h-6 rounded-full border-2 border-white ">
+                                        <img src="{% static 'assets/images/avatars/14.jpg' %}" alt="" class="w-6 h-6 rounded-full border-2 border-white  -ml-2">
+                                        <img src="{% static 'assets/images/avatars/12.jpg' %}" alt="" class="w-6 h-6 rounded-full border-2 border-white  -ml-2">
                                     </div>
                                     <div class="">
                                         Liked <strong> taiye</strong> and <strong> 209 Others </strong>
@@ -428,7 +428,7 @@
                                 <div class="border-t pt-4 space-y-4 ">
                                     <div class="flex">
                                         <div class="w-10 h-10 rounded-full relative flex-shrink-0">
-                                            <img src="{% static 'assets/images/avatars/avatar-1.jpg' %}" alt="" class="absolute h-full rounded-full w-full">
+                                            <img src="{% static 'assets/images/avatars/11.jpg' %}" alt="" class="absolute h-full rounded-full w-full">
                                         </div>
                                         <div class="text-gray-700 py-2 px-3 rounded-md bg-gray-100 h-full relative lg:ml-5 ml-2 lg:mr-20   ">
                                             <p class="leading-6">Y'all like billie eillish? <urna class="i uil-heart"></urna> <i
@@ -438,7 +438,7 @@
                                     </div>
                                     <div class="flex">
                                         <div class="w-10 h-10 rounded-full relative flex-shrink-0">
-                                            <img src="{% static 'assets/images/avatars/avatar-1.jpg' %}" alt="" class="absolute h-full rounded-full w-full">
+                                            <img src="{% static 'assets/images/avatars/11.jpg' %}" alt="" class="absolute h-full rounded-full w-full">
                                         </div>
                                         <div class="text-gray-700 py-2 px-3 rounded-md bg-gray-100 h-full relative lg:ml-5 ml-2 lg:mr-20   ">
                                             <p class="leading-6">She's my favourite <i class="uil-grin-tongue-wink-alt"></i>
@@ -475,7 +475,7 @@
                                 <div class="flex flex-1 items-center space-x-4">
                                     <a href="#">
                                         <div class="bg-gradient-to-tr from-yellow-600 to-pink-600 p-0.5 rounded-full">  
-                                            <img src="{% static 'assets/images/avatars/avatar-2.jpg' %}" class="bg-gray-200 border border-white rounded-full w-8 h-8">
+                                            <img src="{% static 'assets/images/avatars/12.jpg' %}" class="bg-gray-200 border border-white rounded-full w-8 h-8">
                                         </div>
                                     </a>
                                     <span class="block capitalize font-semibold "> tomi_ml </span>
@@ -552,9 +552,9 @@
                                 </div>
                                 <div class="flex items-center space-x-3"> 
                                     <div class="flex items-center">
-                                        <img src="{% static 'assets/images/avatars/avatar-1.jpg' %}" alt="" class="w-6 h-6 rounded-full border-2 border-white ">
-                                        <img src="{% static 'assets/images/avatars/avatar-4.jpg' %}" alt="" class="w-6 h-6 rounded-full border-2 border-white  -ml-2">
-                                        <img src="{% static 'assets/images/avatars/avatar-2.jpg' %}" alt="" class="w-6 h-6 rounded-full border-2 border-white  -ml-2">
+                                        <img src="{% static 'assets/images/avatars/11.jpg' %}" alt="" class="w-6 h-6 rounded-full border-2 border-white ">
+                                        <img src="{% static 'assets/images/avatars/14.jpg' %}" alt="" class="w-6 h-6 rounded-full border-2 border-white  -ml-2">
+                                        <img src="{% static 'assets/images/avatars/12.jpg' %}" alt="" class="w-6 h-6 rounded-full border-2 border-white  -ml-2">
                                     </div>
                                     <div class="">
                                         Liked <strong> taiye</strong> and <strong> 209 Others </strong>
@@ -564,7 +564,7 @@
                                 <div class="border-t pt-4 space-y-4 ">
                                     <div class="flex">
                                         <div class="w-10 h-10 rounded-full relative flex-shrink-0">
-                                            <img src="{% static 'assets/images/avatars/avatar-1.jpg' %}" alt="" class="absolute h-full rounded-full w-full">
+                                            <img src="{% static 'assets/images/avatars/11.jpg' %}" alt="" class="absolute h-full rounded-full w-full">
                                         </div>
                                         <div class="text-gray-700 py-2 px-3 rounded-md bg-gray-100 h-full relative lg:ml-5 ml-2 lg:mr-20   ">
                                             <p class="leading-6">Y'all like billie eillish? <urna class="i uil-heart"></urna> <i
@@ -574,7 +574,7 @@
                                     </div>
                                     <div class="flex">
                                         <div class="w-10 h-10 rounded-full relative flex-shrink-0">
-                                            <img src="{% static 'assets/images/avatars/avatar-1.jpg' %}" alt="" class="absolute h-full rounded-full w-full">
+                                            <img src="{% static 'assets/images/avatars/11.jpg' %}" alt="" class="absolute h-full rounded-full w-full">
                                         </div>
                                         <div class="text-gray-700 py-2 px-3 rounded-md bg-gray-100 h-full relative lg:ml-5 ml-2 lg:mr-20   ">
                                             <p class="leading-6">She's my favourite <i class="uil-grin-tongue-wink-alt"></i>
@@ -604,7 +604,7 @@
                               <div class="flex flex-1 items-center space-x-4">
                                   <a href="#">
                                       <div class="bg-gradient-to-tr from-yellow-600 to-pink-600 p-0.5 rounded-full">  
-                                          <img src="{% static 'assets/images/avatars/avatar-2.jpg' %}" class="bg-gray-200 border border-white rounded-full w-8 h-8">
+                                          <img src="{% static 'assets/images/avatars/12.jpg' %}" class="bg-gray-200 border border-white rounded-full w-8 h-8">
                                       </div>
                                   </a>
                                   <span class="block capitalize font-semibold "> tomi_ml </span>
@@ -683,9 +683,9 @@
                               </div>
                               <div class="flex items-center space-x-3"> 
                                   <div class="flex items-center">
-                                      <img src="{% static 'assets/images/avatars/avatar-1.jpg' %}" alt="" class="w-6 h-6 rounded-full border-2 border-white ">
-                                      <img src="{% static 'assets/images/avatars/avatar-4.jpg' %}" alt="" class="w-6 h-6 rounded-full border-2 border-white  -ml-2">
-                                      <img src="{% static 'assets/images/avatars/avatar-2.jpg' %}" alt="" class="w-6 h-6 rounded-full border-2 border-white  -ml-2">
+                                      <img src="{% static 'assets/images/avatars/11.jpg' %}" alt="" class="w-6 h-6 rounded-full border-2 border-white ">
+                                      <img src="{% static 'assets/images/avatars/14.jpg' %}" alt="" class="w-6 h-6 rounded-full border-2 border-white  -ml-2">
+                                      <img src="{% static 'assets/images/avatars/12.jpg' %}" alt="" class="w-6 h-6 rounded-full border-2 border-white  -ml-2">
                                   </div>
                                   <div class="">
                                       Liked <strong> taiye</strong> and <strong> 209 Others </strong>
@@ -695,7 +695,7 @@
                               <div class="border-t pt-4 space-y-4 ">
                                   <div class="flex">
                                       <div class="w-10 h-10 rounded-full relative flex-shrink-0">
-                                          <img src="{% static 'assets/images/avatars/avatar-1.jpg' %}" alt="" class="absolute h-full rounded-full w-full">
+                                          <img src="{% static 'assets/images/avatars/11.jpg' %}" alt="" class="absolute h-full rounded-full w-full">
                                       </div>
                                       <div class="text-gray-700 py-2 px-3 rounded-md bg-gray-100 h-full relative lg:ml-5 ml-2 lg:mr-20   ">
                                           <p class="leading-6">Y'all like billie eillish? <urna class="i uil-heart"></urna> <i
@@ -705,7 +705,7 @@
                                   </div>
                                   <div class="flex">
                                       <div class="w-10 h-10 rounded-full relative flex-shrink-0">
-                                          <img src="{% static 'assets/images/avatars/avatar-1.jpg' %}" alt="" class="absolute h-full rounded-full w-full">
+                                          <img src="{% static 'assets/images/avatars/11.jpg' %}" alt="" class="absolute h-full rounded-full w-full">
                                       </div>
                                       <div class="text-gray-700 py-2 px-3 rounded-md bg-gray-100 h-full relative lg:ml-5 ml-2 lg:mr-20   ">
                                           <p class="leading-6">She's my favourite <i class="uil-grin-tongue-wink-alt"></i>
@@ -751,7 +751,7 @@
                                 <div class="flex items-center justify-between py-3">
                                     <div class="flex flex-1 items-center space-x-4">
                                         <a href="profile.html">
-                                            <img src="{% static 'assets/images/avatars/avatar-2.jpg' %}" class="bg-gray-200 rounded-full w-10 h-10">
+                                            <img src="{% static 'assets/images/avatars/12.jpg' %}" class="bg-gray-200 rounded-full w-10 h-10">
                                         </a>
                                         <div class="flex flex-col">
                                             <span class="block capitalize font-semibold"> tomi_ml </span>
@@ -764,7 +764,7 @@
                                 <div class="flex items-center justify-between py-3">
                                     <div class="flex flex-1 items-center space-x-4">
                                         <a href="profile.html">
-                                            <img src="{% static 'assets/images/avatars/avatar-1.jpg' %}" class="bg-gray-200 rounded-full w-10 h-10">
+                                            <img src="{% static 'assets/images/avatars/11.jpg' %}" class="bg-gray-200 rounded-full w-10 h-10">
                                         </a>
                                         <div class="flex flex-col">
                                             <span class="block capitalize font-semibold"> taiye </span>
@@ -776,7 +776,7 @@
                                 <div class="flex items-center justify-between py-3">
                                     <div class="flex flex-1 items-center space-x-4">
                                         <a href="profile.html">
-                                            <img src="{% static 'assets/images/avatars/avatar-5.jpg' %}" class="bg-gray-200 rounded-full w-10 h-10">
+                                            <img src="{% static 'assets/images/avatars/14.jpg' %}" class="bg-gray-200 rounded-full w-10 h-10">
                                         </a>
                                         <div class="flex flex-col">
                                             <span class="block capitalize font-semibold"> kayode </span>
@@ -788,7 +788,7 @@
                                 <div class="flex items-center justify-between py-3">
                                     <div class="flex flex-1 items-center space-x-4">
                                         <a href="profile.html">
-                                            <img src="{% static 'assets/images/avatars/avatar-7.jpg' %}" class="bg-gray-200 rounded-full w-10 h-10">
+                                            <img src="{% static 'assets/images/avatars/13.jpg' %}" class="bg-gray-200 rounded-full w-10 h-10">
                                         </a>
                                         <div class="flex flex-col">
                                             <span class="block capitalize font-semibold"> faith_do </span>
