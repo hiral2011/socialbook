@@ -736,16 +736,20 @@ header.sticky {
     display: block;
     position: relative;
     width: 100%;
+    
 }
 
 .feature-photo > figure {
     margin-bottom: 0;
+    height: 100%;
+    width: 100%;
+    
 }
 
 .feature-photo > figure img {
     display: inline-block;
     width: 100%;
-}
+    }
 
 .user-avatar {
     border: 2px solid pink;
@@ -771,7 +775,7 @@ header.sticky {
 }
 
 .timeline-info {
-    background:#b0b3b8 none repeat scroll 0 0;
+    background: #b0b3b8 none repeat scroll 0 0;
     display: block;
     line-height: 59px;
     width: 100%;
